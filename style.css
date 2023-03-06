@@ -1,0 +1,169 @@
+:root {
+
+    --Violet: hsl(257, 40%, 49%);
+    --Soft-Magenta: hsl(300, 69%, 71%);
+
+    --parrafo: 'Open Sans', sans-serif;
+    --titulos: 'Poppins', sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 62.5%;
+    background-color: var(--Violet);
+}
+
+.title, 
+.btn {
+    font-family: var(--titulos);
+}
+
+p {
+    font-family: var(--parrafo);
+}
+
+.main-container {
+    height: 100vh;
+    background-image: url(/images/bg-mobile.svg);
+    background-repeat: no-repeat;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 2.5rem;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+}
+
+.header i {
+    font-size: 1.6rem;
+}
+
+.header .title {
+    font-size: 2rem;
+    padding-left: 1rem;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container__image {
+    padding: 3.5rem 0;
+}
+
+.container__image img {
+    width: 100%;
+}
+
+.container__descripcion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container__descripcion .title {
+    font-size: 1.6rem;
+    padding-top: 1rem;
+}
+
+.container__descripcion p {
+    font-size: 1.2rem;
+    padding: 1.5rem;
+}
+.container__button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.btn {
+    color: var(--Violet);
+    border: 1px solid var(--Soft-Magenta);
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 3rem;
+    padding: 1rem;
+    width: 80%;
+    cursor: pointer;
+}
+
+.btn:hover {
+    color: #fff;
+    background-color: var(--Soft-Magenta);
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    padding-top: 6rem;
+}
+
+.footer i {
+    padding: .5rem;
+    font-size: 1rem;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    margin: .3rem;
+    cursor: pointer;
+}
+
+.footer i:hover {
+    color: var(--Soft-Magenta);
+    border: 1px solid var(--Soft-Magenta);
+}
+
+@media (min-width: 780px) {
+    .main-container {
+        background-image: url(/images/bg-desktop.svg);
+        background-size: contain,cover;
+        background-repeat: no-repeat;
+    }
+    .container {
+        flex-direction: row;
+        padding-top: 4rem;
+    }
+    .container__image {
+        width: 140%;
+    }
+
+    .container__descripcion {
+        padding: 0 2.5rem;
+        text-align: left;
+    }
+
+    .container__descripcion p {
+        padding: 2rem 0;
+    }
+
+    .container__descripcion .title {
+        font-size: 3.2rem;
+    }
+
+    .container__button {
+        justify-content: flex-start;
+    }
+
+    .btn {
+        width: 30%;
+    }
+
+    .footer {
+        padding-top: inherit;
+        justify-content: flex-end;
+    }
+
+    .footer i {
+        font-size: 1.2rem;
+        margin: .5rem;
+    }
+}
